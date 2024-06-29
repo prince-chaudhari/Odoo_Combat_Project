@@ -1,0 +1,247 @@
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 270px;
+    background-color: #f8f9fa;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 50px 50px 0px;
+    border-radius: 0px 50px 50px 0px;
+    background: var(--main, linear-gradient(180deg, #6CBA9C 0%, #63AE78 100%));}
+
+.sidebar a,
+.sidebar .logout-btn {
+   
+    text-decoration: none;
+  
+    color:white;
+
+
+}
+
+
+
+.sidebar i {
+    margin-right: 10px;
+}
+
+.logout-btn {
+    position: absolute;
+    bottom: 40px;
+    margin-left: -5px;
+    width: 170px !important;
+
+border-radius: 50px;
+background: linear-gradient(83deg, #A076FC 5.91%, #C49CE8 39.37%, #D376B5 84.54%);
+color: #FFF!important;
+font-family: Poppins;
+font-size: 18px !important;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 42px */
+align-items: center;
+text-align: center;
+align-content: center;
+
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    width: 80%;
+    text-align: center;
+}
+.side-link{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    margin-bottom: 60px;
+}
+.side-link-active{
+    color: #6CBA9C;
+font-family: Poppins;
+font-size: 17px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%;
+margin-bottom: 60px; 
+}
+.active-link{
+    width: 381px;
+height: 444px;
+padding-left: 18px;
+z-index: -1;
+position: absolute;
+}
+.profile-pic{
+    top: 35px;
+    position: fixed;
+    z-index: 1;
+    width: 166px;
+height: 166px;
+flex-shrink: 0;
+    border-radius: 27px;
+    border: 7px solid #F7D687;
+    
+    background: url("pfp.png")  center ;
+}
+.profile-name{
+    top: 179px;
+    border-radius: 12px;
+background: #F7D687;
+width: 231px;
+height: 50px;
+flex-shrink: 0;
+z-index: 3;
+position: fixed;
+color: #3A4555;
+text-align: center;
+font-family: Poppins;
+font-size: 25px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 35px */
+align-items: center;
+vertical-align: middle;
+align-content: center;
+}
+.top-nav{
+    z-index: -30;
+    align-content: center;
+    position: fixed;
+margin-left: 250px;
+width: 100%;
+background-color: #FFFFFF;
+height: 166px;
+}
+body{
+    background-color: #FAFAFA !important;
+}
+.task-cards-image-1{
+    
+    background: url("task-completed.png")  center ;
+    width: 274px;
+height: 257px;
+margin-right: 40px;
+}
+.task-cards-image-2{
+    
+    background: url("task-inprogress.png")  center ;
+    width: 274px;
+height: 257px;
+margin-right: 40px;
+}
+.task-cards-image-3{
+    
+    background: url("task-upcoming.png")  center ;
+    width: 274px;
+height: 257px;
+margin-right: 40px;
+}
+.task-cards{
+    
+    display: flex;
+    position: absolute;
+    margin-top: 210px ;
+    margin-left: 310px;
+    color: #FAFAFA;
+font-family: Poppins;
+font-size: 21px;
+font-style: normal;
+font-weight: 600;
+line-height: 122.55%;
+align-content: center;
+align-items: center;
+vertical-align: middle;
+}
+.task-cards-text{
+    
+    position: relative;
+    top: 140px;
+    left: 30px;
+
+}
+.leaderboard{
+    position: fixed;
+    left: 1270px;
+    top: 210px ;
+
+
+    border-radius: 45px;
+background: #FFF;
+box-shadow: 0px 0px 86px 0px rgba(0, 0, 0, 0.05);
+width: 589px;
+height: 422px;
+flex-shrink: 0;
+}
+.leaderboard-title{
+    padding-left: 40px;
+    padding-top: 30px;
+    color: #3A4555;
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.new-courses{
+    position: fixed;
+    left: 320px;
+    top:500px;
+    width: 922px;
+    height: 477px;
+background: url("New-course.png") no-repeat center;
+}
+.badges{
+    position: fixed;
+    left: 1200px;
+    top:580px
+}
+.course-card{
+    width: 261px;
+height: 305px;
+flex-shrink: 0;
+border-radius: 13px;
+background: #E4E4E4;
+margin-right: 29px;
+}
+.course-card-images{
+    width: 261px;
+height: 158px;
+flex-shrink: 0;
+}
+.course-text{
+    padding-top: 20px;
+    padding-left: 20px;
+    color: #3A4555;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.course-button{
+    width: 235px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 6px;
+background: #68B489;
+margin-left: 12px;
+color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+padding-top: 4px;
+
+}

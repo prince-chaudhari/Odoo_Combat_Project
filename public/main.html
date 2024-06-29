@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartEdu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Centering carousel indicators */
+        .carousel-indicators {
+            justify-content: center;
+        }
+
+        /* Customizing carousel control buttons */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: black;
+            opacity: 0.8;
+            align-self: center;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+
+            color: white;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .faq-section {
+            padding: 50px 15px;
+            background-color: #e8f5e9;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #388e3c;
+        }
+
+        .card {
+            border: none;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #c8e6c9;
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        .card-header h5 {
+            margin-bottom: 0;
+            color: #2e7d32;
+        }
+
+        .card-header .btn-link {
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+            width: 100%;
+            text-align: left;
+        }
+
+        .card-header .btn-link:hover {
+            color: #1b5e20;
+            text-decoration: underline;
+        }
+
+        .card-body {
+            padding: 20px;
+            background-color: #f1f8e9;
+            border-top: 2px solid #c8e6c9;
+        }
+    </style>
+    <style>
+        .footer {
+            background-color: #e8f5e9;
+            padding: 40px 0;
+            color: #2e7d32;
+        }
+
+        .footer .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        .footer .footer-links,
+        .footer .footer-resources {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer .footer-links li,
+        .footer .footer-resources li {
+            margin-bottom: 10px;
+        }
+
+        .footer .footer-links li a,
+        .footer .footer-resources li a {
+            color: #2e7d32;
+            text-decoration: none;
+        }
+
+        .footer .footer-links li a:hover,
+        .footer .footer-resources li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .footer-contact,
+        .footer .footer-newsletter,
+        .footer .footer-social {
+            margin-bottom: 20px;
+        }
+
+        .footer .footer-social a {
+            color: #2e7d32;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .footer .footer-social a:hover {
+            color: #1b5e20;
+        }
+
+        .footer .newsletter-form input[type="email"] {
+            border: 1px solid #2e7d32;
+            border-radius: 20px;
+            padding: 5px 10px;
+            width: 70%;
+        }
+
+        .footer .newsletter-form button {
+            background-color: #2e7d32;
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            padding: 5px 15px;
+            margin-left: -4px;
+        }
+
+        .footer .newsletter-form button:hover {
+            background-color: #1b5e20;
+        }
+
+        .footer .copyright {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #c8e6c9;
+            margin-top: 20px;
+        }
+    </style>
+    <style>
+        .courses-section {
+            padding: 50px 0;
+            background-color: #e8f5e9;
+        }
+
+        .course-card {
+            border: 1px solid #2e7d32;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .course-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .course-card-body {
+            padding: 15px;
+        }
+
+        .course-price {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .course-btn {
+            background-color: #2e7d32;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .course-btn:hover {
+            background-color: #1b5e20;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#loginModal">
+                Login
+            </button>
+            <button type="button" class="btn btn-secondary ml-2" data-toggle="modal" data-target="#signupModal">
+                Sign Up
+            </button>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="/login">
+                        <div class="form-group">
+                            <label for="loginEmail">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/register" method="post">
+                        <div class="form-group">
+                            <label for="signupFirstName">First Name</label>
+                            <input type="text" class="form-control" id="signupFirstName" placeholder="Enter first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupLastName">Last Name</label>
+                            <input type="text" class="form-control" id="signupLastName" placeholder="Enter last name">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupRole">Role</label>
+                            <select class="form-control" id="signupRole">
+                                <option>User</option>
+                                <option>Admin</option>
+                                <option>Moderator</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- <h2 class="mt-5 mb-4">Bootstrap Carousel Example</h2> -->
+        <br><br><br><br>
+        <!-- Carousel -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-text"
+                        style="position: absolute; top: 70px;left:40px ;padding: 20px; background-color: whitesmoke;">
+                        <h1>Learning that gets you</h1>
+                        <p>skill for your present(and your future).Get started with us.</p>
+                    </div>
+                    <img src="carousel1.jpg" class="d-block w-100" alt="First Slide">
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-text"
+                        style="position: absolute; top: 70px;left:40px ;padding: 20px; background-color: whitesmoke;width: 40%;">
+                        <h1>Skills that drive you forward</h1>
+                        <p>Technology and the world of work change fast — with us, you’re faster. Get the skills to
+                            achieve goals and stay competitive.</p>
+                    </div>
+                    <img src="carousel2.jpg" class="d-block w-100" alt="Second Slide">
+                </div>
+            </div>
+
+            <!-- Side control buttons -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <br><br><br>
+    <section class="courses-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Popular Courses</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="course-card">
+                        <img src="1.jpg" alt="Course 1">
+                        <div class="course-card-body">
+                            <h5 class="course-title">Course Title 1</h5>
+                            <p class="course-info">Learn the basics of Course 1 and enhance your skills.</p>
+                            <p class="course-price">$99.99</p>
+                            <button class="btn course-btn" data-toggle="modal" data-target="#loginModal">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="course-card">
+                        <img src="2.jpg" alt="Course 2">
+                        <div class="course-card-body">
+                            <h5 class="course-title">Course Title 2</h5>
+                            <p class="course-info">Advance your knowledge in Course 2 with expert instructors.</p>
+                            <p class="course-price">$129.99</p>
+                            <button class="btn course-btn" data-toggle="modal" data-target="#loginModal">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="course-card">
+                        <img src="3.jpg" alt="Course 3">
+                        <div class="course-card-body">
+                            <h5 class="course-title">Course Title 3</h5>
+                            <p class="course-info">Master the concepts of Course 3 with hands-on projects.</p>
+                            <p class="course-price">$149.99</p>
+                            <button class="btn course-btn" data-toggle="modal" data-target="#loginModal">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+    <div class="faq-section">
+        <div class="container">
+            <h2 class="faq-header">Frequently Asked Questions</h2>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                What is a smart education website?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            A smart education website uses advanced technologies to provide interactive, personalized,
+                            and efficient learning experiences for students and teachers.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                How can I enroll in a course?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            To enroll in a course, simply log in to your account, navigate to the 'Courses' section, and
+                            select the course you wish to enroll in. Follow the on-screen instructions to complete your
+                            enrollment.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                What if I forget my password?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            If you forget your password, click on the 'Forgot Password' link on the login page. You will
+                            be prompted to enter your email address, and a password reset link will be sent to you.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                aria-expanded="false" aria-controls="collapseFour">
+                                How do I submit assignments?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            Assignments can be submitted through the 'Assignments' section in your course dashboard.
+                            Follow the instructions provided to upload and submit your assignment before the deadline.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                                aria-expanded="false" aria-controls="collapseFive">
+                                How can I track my performance?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body">
+                            You can track your performance through the 'Performance' section on your dashboard. This
+                            section provides detailed analytics and reports on your progress and grades.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-contact">
+                    <div class="footer-logo">Smart Education</div>
+                    <p>1234 Education Street<br>City, State, 56789</p>
+                    <p>Email: info@smartedu.com<br>Phone: (123) 456-7890</p>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-resources">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-newsletter">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 footer-social text-center">
+                    <h5>Follow Us</h5>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Smart Education. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

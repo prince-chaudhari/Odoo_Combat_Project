@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Course</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e8f5e9;
+            font-family:'Poppins';
+        }
+
+        .course-container {
+            padding: 50px 0;
+        }
+
+        .course-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 20px;
+        }
+
+        .course-video {
+            margin-bottom: 30px;
+        }
+
+        .quiz-section {
+            background-color: #f1f8e9;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+
+        .quiz-question {
+            margin-bottom: 15px;
+        }
+
+        .quiz-submit-btn {
+            background-color: #2e7d32;
+            color: white;
+            border-radius: 20px;
+            margin-top: 20px;
+            align-self: center;
+        }
+
+        .quiz-submit-btn:hover {
+            background-color: #1b5e20;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container course-container">
+        <h2 class="text-center course-title">Web Development Course</h2>
+        <div class="embed-responsive embed-responsive-16by9 course-video">
+            <<iframe width="560" height="315" src="https://www.youtube.com/embed/3JluqTojuME?si=p_9_THSNnwDHe7Sr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="quiz-section">
+            <center>
+                <h3>Quiz</h3>
+                <form id="quiz-form">
+                    <div class="quiz-question">
+                        <p>1. Which language is used for styling web pages?</p>
+                        <label><input type="radio" name="q1" value="HTML"> HTML</label><br>
+                        <label><input type="radio" name="q1" value="JQuery"> JQuery</label><br>
+                        <label><input type="radio" name="q1" value="CSS"> CSS</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>2. Which is not a JavaScript Framework?</p>
+                        <label><input type="radio" name="q2" value="Python Script"> Python Script</label><br>
+                        <label><input type="radio" name="q2" value="JQuery"> JQuery</label><br>
+                        <label><input type="radio" name="q2" value="Django"> Django</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>3. What does CSS stand for?</p>
+                        <label><input type="radio" name="q3" value="Cascading Style Sheets"> Cascading Style
+                            Sheets</label><br>
+                        <label><input type="radio" name="q3" value="Colorful Style Sheets"> Colorful Style
+                            Sheets</label><br>
+                        <label><input type="radio" name="q3" value="Computer Style Sheets"> Computer Style
+                            Sheets</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>4. Which HTML tag is used to define an internal style sheet?</p>
+                        <label><input type="radio" name="q4" value="<style>"><code>&lt;style&gt;</code></label><br>
+                        <label><input type="radio" name="q4" value="<script>"><code>&lt;script&gt;</code></label><br>
+                        <label><input type="radio" name="q4" value="<css>"><code>&lt;css&gt;</code></label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>5. Which is the correct CSS syntax?</p>
+                        <label><input type="radio" name="q5" value="body:color=black;"> body:color=black;</label><br>
+                        <label><input type="radio" name="q5" value="{body;color:black;}">
+                            {body;color:black;}</label><br>
+                        <label><input type="radio" name="q5" value="body {color: black;}"> body {color: black;}</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>6. How do you insert a comment in a CSS file?</p>
+                        <label><input type="radio" name="q6" value="// this is a comment"> // this is a
+                            comment</label><br>
+                        <label><input type="radio" name="q6" value="/* this is a comment */"> /* this is a comment
+                            */</label><br>
+                        <label><input type="radio" name="q6" value="<!-- this is a comment -->"> &lt;!-- this is a
+                            comment
+                            --&gt;</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>7. Which property is used to change the background color?</p>
+                        <label><input type="radio" name="q7" value="color"> color</label><br>
+                        <label><input type="radio" name="q7" value="bgcolor"> bgcolor</label><br>
+                        <label><input type="radio" name="q7" value="background-color"> background-color</label>
+                    </div>
+                    <div class="quiz-question">
+                        <p>8. Which CSS property is used to change the text color of an element?</p>
+                        <label><input type="radio" name="q8" value="fgcolor"> fgcolor</label><br>
+                        <label><input type="radio" name="q8" value="text-color"> text-color</label><br>
+                        <label><input type="radio" name="q8" value="color"> color</label>
+                    </div>
+                    <button type="submit" class="btn quiz-submit-btn">Submit</button>
+                    <button type="button" class="btn quiz-submit-btn" onclick="goBack()"> Go Back </button><script>
+
+
+                        function goBack() {
+                            window.history.back();
+                        };
+                    </script>
+                </form>
+            </center>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Example of handling the form submit event
+        document.getElementById('quiz-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Quiz submitted!'); // Replace this with your own submit logic
+        });
+    </script>
+
+</body>
+
+</html>
